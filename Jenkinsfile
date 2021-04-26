@@ -1,6 +1,6 @@
 def project = 'people-service'
 def appName = 'people-service-agr'
-def tenancy='emeaccoe'
+def tenancy='frxplqvlwvmz'
 def ocir='fra.ocir.io'
 def imageTag = "${ocir}/${tenancy}/oracleimc/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
@@ -17,7 +17,7 @@ labels:
   component: ci
 spec:
   # Use service account that can deploy to all namespaces
-  serviceAccountName: cd-jenkins2
+  serviceAccountName: cd-jenkins
   containers:
   - name: kubectl
     image: allokubs/kubectl
